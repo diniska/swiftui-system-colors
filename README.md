@@ -42,6 +42,8 @@ Please, open a pull request or an issue if you find that one or the other color 
 Please, only add system colors to this package. We only provide convenient interfaces without making a decision about how some colors should look.
 For example, if there is no color `systemFill` provided by macOS - we don't provide it on macOS either, but for iOS, it exists and we provide that color on iOS.
 
+If you have ideas of how to better test the provided bridging code - please add an issue with the description of your idea or add a pull request with the implementation.
+
 Please, keep the similar code style if you propose a change to the package. Current code style has the next benefits:
 
 * Easy to edit with multiple cursors
