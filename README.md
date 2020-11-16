@@ -2,7 +2,13 @@
 
 Use standard **system colors** from **SwiftUI** on iOS, macOS or tvOS.
 
-Currently, SwiftUI doesn't provide access to standard system colors, so you can find some sort of color convertion (`Color(UIColor.label)`) in almost any SwiftUI project. This library focusing on bringing all the system colors to SwiftUI so you no longer need to write the conversion manually every time.
+Currently, SwiftUI doesn't provide access to standard system colors, so you can find some sort of color conversion (`Color(UIColor.label)`) in almost any SwiftUI project. This library focusing on bringing all the system colors to SwiftUI so you no longer need to write the conversion manually every time.
+
+Benefits of using `SystemColors` package dependency in your project compared to custom implementation or copy-pasting:
+
+* Receive **updates** soon after a system new color is introduced,
+* Standardised **naming** for iOS and macOS so that it is always `Color.label` instead of iOS's `UIColor.label` and macOS's `NSColor.labelColor`
+* All the **compatibility** checks like `@available(iOS 13.0, *)` or `#if canImport(UIKit)` are implemented by the package and maintained by the community - less chance to introduce an error in one of the platforms support.
 
 
 ## How to use
@@ -32,6 +38,9 @@ Rectangle()
 ## Contribution
 
 Please, open a pull request or an issue if you find that one or the other color is missing or represented in a wrong way. 
+
+Please, only add system colors to this package. We only provide convenient interfaces without making a decision about how some colors should look.
+For example, if there is no color `systemFill` provided by macOS - we don't provide it on macOS either, but for iOS, it exists and we provide that color on iOS.
 
 Please, keep the similar code style if you propose a change to the package. Current code style has the next benefits:
 
