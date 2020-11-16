@@ -1,5 +1,7 @@
 # SwiftUI System Colors
 
+![Swift 5.3](https://img.shields.io/badge/Swift-5.3-FA5B2C) ![Xcode 12](https://img.shields.io/badge/Xcode-12-44B3F6) ![iOS 8.0](https://img.shields.io/badge/iOS-8.0-178DF6) ![iPadOS 8.0](https://img.shields.io/badge/iPadOS-8.0-178DF6) ![MacOS 10.10](https://img.shields.io/badge/MacOS-10.10-178DF6) ![Tests](https://github.com/diniska/swiftui-system-colors/workflows/Build%20&%20Test/badge.svg)
+
 Use standard **system colors** from **SwiftUI** on iOS, macOS or tvOS.
 
 Currently, SwiftUI doesn't provide access to standard system colors, so you can find some sort of color conversion (`Color(UIColor.label)`) in almost any SwiftUI project. This library focusing on bringing all the system colors to SwiftUI so you no longer need to write the conversion manually every time.
