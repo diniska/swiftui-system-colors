@@ -3,10 +3,10 @@ import SwiftUI
 
 #if canImport(UIKit)
 import UIKit
-typealias PlatformColor = UIColor
+private typealias PlatformColor = UIColor
 #elseif canImport(AppKit)
 import AppKit
-typealias PlatformColor = NSColor
+private typealias PlatformColor = NSColor
 #endif
 
 #if !os(watchOS) // All the methods below are not availalbe for WatchOS at the time of writing
@@ -18,7 +18,7 @@ typealias PlatformColor = NSColor
 // iOS      | https://developer.apple.com/documentation/uikit/uicolor/standard_colors
 // OSX      | https://developer.apple.com/documentation/appkit/nscolor/standard_colors
 @available(iOS 13.0, macOS 10.15, *)
-extension Color {
+public extension Color {
     ///A blue color that automatically adapts to the current trait environment.
     static var systemBlue: Color { Color(PlatformColor.systemBlue) }
     ///A green color that automatically adapts to the current trait environment.
@@ -47,14 +47,14 @@ extension Color {
 // OSX      | https://developer.apple.com/documentation/appkit/nscolor/standard_colors
 
 @available(iOS 13.0, OSX 10.15, *)
-extension Color {
+public extension Color {
     /// The base gray color.
     static var systemGray: Color { Color(PlatformColor.systemGray) }
 }
 
 #if canImport(UIKit) && !os(tvOS)
 @available(iOS 13.0, *)
-extension Color {
+public extension Color {
     /// A second-level shade of grey.
     static var systemGray2: Color { Color(PlatformColor.systemGray2) }
     /// A third-level shade of grey.
@@ -79,7 +79,7 @@ extension Color {
 #if canImport(UIKit)
 
 @available(iOS 13.0, *)
-extension Color {
+public extension Color {
     // MARK: Label Colors
     /// The color for text labels that contain primary content.
     static var label: Color { Color(PlatformColor.label) }
@@ -152,7 +152,7 @@ extension Color {
 #elseif canImport(AppKit)
 
 @available(OSX 10.15, *)
-extension Color {
+public extension Color {
     // MARK: Label Colors
     /// The primary color to use for text labels.
     static var label: Color { Color(PlatformColor.labelColor) }
