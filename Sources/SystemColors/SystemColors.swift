@@ -17,6 +17,7 @@ private typealias PlatformColor = NSColor
 // ---------|-----------
 // iOS      | https://developer.apple.com/documentation/uikit/uicolor/standard_colors
 // OSX      | https://developer.apple.com/documentation/appkit/nscolor/standard_colors
+#if arch(arm64)
 @available(iOS 13.0, macOS 10.15, *)
 public extension Color {
     ///A blue color that automatically adapts to the current trait environment.
@@ -38,6 +39,7 @@ public extension Color {
     ///A yellow color that automatically adapts to the current trait environment.
     static var systemYellow: Color { Color(PlatformColor.systemYellow) }
 }
+#endif
 
 // MARK: - Adaptable Gray Colors
 // Links to standard colors documentation
@@ -46,13 +48,16 @@ public extension Color {
 // iOS      | https://developer.apple.com/documentation/uikit/uicolor/standard_colors
 // OSX      | https://developer.apple.com/documentation/appkit/nscolor/standard_colors
 
+#if arch(arm64)
 @available(iOS 13.0, OSX 10.15, *)
 public extension Color {
     /// The base gray color.
     static var systemGray: Color { Color(PlatformColor.systemGray) }
 }
+#endif
 
 #if canImport(UIKit) && !os(tvOS)
+#if arch(arm64)
 @available(iOS 13.0, *)
 public extension Color {
     /// A second-level shade of grey.
@@ -68,6 +73,7 @@ public extension Color {
 
 }
 #endif
+#endif
 
 // MARK: - UI Element Colors
 // Links to standard colors documentation
@@ -77,7 +83,7 @@ public extension Color {
 // OSX      | https://developer.apple.com/documentation/appkit/nscolor/ui_element_colors
 
 #if canImport(UIKit)
-
+#if arch(arm64)
 @available(iOS 13.0, *)
 public extension Color {
     // MARK: Label Colors
@@ -148,7 +154,7 @@ public extension Color {
     @available(tvOS, unavailable)
     static var lightText: Color { Color(PlatformColor.lightText) }
 }
-
+#endif
 #elseif canImport(AppKit)
 
 @available(OSX 10.15, *)
