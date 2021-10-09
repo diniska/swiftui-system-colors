@@ -1,4 +1,5 @@
-#if canImport(SwiftUI) && canImport(Combine)
+#if canImport(SwiftUI) && canImport(Combine) && (arch(arm64) || arch(x86_64))
+// https://stackoverflow.com/a/61954608
 import SwiftUI
 
 #if canImport(UIKit)
@@ -77,7 +78,6 @@ public extension Color {
 // OSX      | https://developer.apple.com/documentation/appkit/nscolor/ui_element_colors
 
 #if canImport(UIKit)
-
 @available(iOS 13.0, *)
 public extension Color {
     // MARK: Label Colors
@@ -148,7 +148,6 @@ public extension Color {
     @available(tvOS, unavailable)
     static var lightText: Color { Color(PlatformColor.lightText) }
 }
-
 #elseif canImport(AppKit)
 
 @available(OSX 10.15, *)
