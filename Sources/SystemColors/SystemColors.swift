@@ -70,6 +70,16 @@ public extension Color {
 }
 #endif
 
+// MARK: - Fixed Colors
+#if canImport(UIKit)
+@available(iOS 2.0, *)
+public extension Color {
+	static var darkGray:	Color = PlatformColor(white: 1.0/3.0, alpha: 1.0)
+	static var lightGray:Color = PlatformColor(white: 1.0, alpha: 1.0)
+	static var magenta:	Color = PlatformColor(red: 1.0, green: 0.0, blue: 1.0, alpha: 1.0)
+}
+#endif
+
 // MARK: - UI Element Colors
 // Links to standard colors documentation
 // Platform | Reference
