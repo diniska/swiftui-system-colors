@@ -18,6 +18,10 @@ jobs:
     - name: Run tests for macOS
       run: swift test -v
     - name: Build for iOS
-      run: xcodebuild build -sdk iphoneos -scheme 'SystemColors'
+      run: xcodebuild -destination 'platform=iOS Simulator,name=iPhone 8' -scheme SystemColors
     - name: Run tests for iOS
-      run: xcodebuild test -destination 'name=iPhone 8' -scheme "SystemColors"
+      run: xcodebuild test -destination 'name=iPhone 8' -scheme SystemColors
+    - name: Build for tvOS
+      run: xcodebuild build -destination 'platform=tvOS Simulator,name=Apple TV' -scheme SystemColors
+    - name: Run tests for tvOS
+      run: xcodebuild test -destination 'name=Apple TV' -scheme SystemColors

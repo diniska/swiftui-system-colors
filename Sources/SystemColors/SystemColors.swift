@@ -20,23 +20,31 @@ private typealias PlatformColor = NSColor
 // OSX      | https://developer.apple.com/documentation/appkit/nscolor/standard_colors
 @available(iOS 13.0, macOS 10.15, *)
 public extension Color {
-    ///A blue color that automatically adapts to the current trait environment.
+    /// A blue color that automatically adapts to the current trait environment.
     static var systemBlue: Color { Color(PlatformColor.systemBlue) }
-    ///A green color that automatically adapts to the current trait environment.
+    /// A brown color that automatically adapts to the current trait environment.
+    static var systemBrown: Color { Color(PlatformColor.systemBrown) }
+    /// A cyan color that automatically adapts to the current trait environment.
+    @available(iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    static var systemCyan: Color { Color(PlatformColor.systemCyan) }
+    /// A green color that automatically adapts to the current trait environment.
     static var systemGreen: Color { Color(PlatformColor.systemGreen) }
-    ///An indigo color that automatically adapts to the current trait environment.
+    /// An indigo color that automatically adapts to the current trait environment.
     static var systemIndigo: Color { Color(PlatformColor.systemIndigo) }
-    ///An orange color that automatically adapts to the current trait environment.
+    /// A mint color that automatically adapts to the current trait environment.
+    @available(iOS 15.0, macOS 10.15, tvOS 15.0, *)
+    static var systemMint: Color { Color(PlatformColor.systemMint) }
+    /// An orange color that automatically adapts to the current trait environment.
     static var systemOrange: Color { Color(PlatformColor.systemOrange) }
-    ///A pink color that automatically adapts to the current trait environment.
+    /// A pink color that automatically adapts to the current trait environment.
     static var systemPink: Color { Color(PlatformColor.systemPink) }
-    ///A purple color that automatically adapts to the current trait environment.
+    /// A purple color that automatically adapts to the current trait environment.
     static var systemPurple: Color { Color(PlatformColor.systemPurple) }
-    ///A red color that automatically adapts to the current trait environment.
+    /// A red color that automatically adapts to the current trait environment.
     static var systemRed: Color { Color(PlatformColor.systemRed) }
-    ///A teal color that automatically adapts to the current trait environment.
+    /// A teal color that automatically adapts to the current trait environment.
     static var systemTeal: Color { Color(PlatformColor.systemTeal) }
-    ///A yellow color that automatically adapts to the current trait environment.
+    /// A yellow color that automatically adapts to the current trait environment.
     static var systemYellow: Color { Color(PlatformColor.systemYellow) }
 }
 
@@ -49,26 +57,42 @@ public extension Color {
 
 @available(iOS 13.0, OSX 10.15, *)
 public extension Color {
-    /// The base gray color.
+    /// The standard base gray color that adapts to the environment.
     static var systemGray: Color { Color(PlatformColor.systemGray) }
 }
 
 #if canImport(UIKit) && !os(tvOS)
 @available(iOS 13.0, *)
 public extension Color {
-    /// A second-level shade of grey.
+    /// A second-level shade of gray that adapts to the environment.
     static var systemGray2: Color { Color(PlatformColor.systemGray2) }
-    /// A third-level shade of grey.
+    /// A third-level shade of gray that adapts to the environment.
     static var systemGray3: Color { Color(PlatformColor.systemGray3) }
-    /// A fourth-level shade of grey.
+    /// A fourth-level shade of gray that adapts to the environment.
     static var systemGray4: Color { Color(PlatformColor.systemGray4) }
-    /// A fifth-level shade of grey.
+    /// A fifth-level shade of gray that adapts to the environment.
     static var systemGray5: Color { Color(PlatformColor.systemGray5) }
-    /// A sixth-level shade of grey.
+    /// A sixth-level shade of gray that adapts to the environment.
     static var systemGray6: Color { Color(PlatformColor.systemGray6) }
-
 }
 #endif
+
+// MARK: - Fixed Colors
+// Links to standard colors documentation
+// Platform | Reference
+// ---------|-----------
+// iOS      | https://developer.apple.com/documentation/uikit/uicolor/standard_colors
+// OSX      | https://developer.apple.com/documentation/appkit/nscolor/standard_colors
+
+@available(iOS 13.0, OSX 10.15, *)
+public extension Color {
+    /// A color object with a grayscale value of 1/3 and an alpha value of 1.0.
+    static var darkGray: Color { Color(PlatformColor.darkGray) }
+    /// A color object with a grayscale value of 2/3 and an alpha value of 1.0.
+    static var lightGray: Color { Color(PlatformColor.lightGray) }
+    /// A color object with RGB values of 1.0, 0.0, and 1.0, and an alpha value of 1.0.
+    static var magenta: Color { Color(PlatformColor.magenta) }
+}
 
 // MARK: - UI Element Colors
 // Links to standard colors documentation
@@ -89,7 +113,7 @@ public extension Color {
     static var tertiaryLabel: Color { Color(PlatformColor.tertiaryLabel) }
     /// The color for text labels that contain quaternary content.
     static var quaternaryLabel: Color { Color(PlatformColor.quaternaryLabel) }
-
+    
     // MARK: Fill Colors
     /// An overlay fill color for thin and small shapes.
     @available(tvOS, unavailable)
@@ -103,12 +127,14 @@ public extension Color {
     /// An overlay fill color for large areas that contain complex content.
     @available(tvOS, unavailable)
     static var quaternarySystemFill: Color { Color(PlatformColor.quaternarySystemFill) }
-
+    
     // MARK: Text Colors
     /// The color for placeholder text in controls or text views.
     static var placeholderText: Color { Color(PlatformColor.placeholderText) }
+    
     // MARK: Standard Content Background Colors
     /// Use these colors for standard table views and designs that have a white primary background in a light environment.
+    
     /// The color for the main background of your interface.
     @available(tvOS, unavailable)
     static var systemBackground: Color { Color(PlatformColor.systemBackground) }
@@ -118,8 +144,10 @@ public extension Color {
     /// The color for content layered on top of secondary backgrounds.
     @available(tvOS, unavailable)
     static var tertiarySystemBackground: Color { Color(PlatformColor.tertiarySystemBackground) }
+    
     // MARK: Grouped Content Background Colors
     /// Use these colors for grouped content, including table views and platter-based designs.
+    
     /// The color for the main background of your grouped interface.
     @available(tvOS, unavailable)
     static var systemGroupedBackground: Color { Color(PlatformColor.systemGroupedBackground) }
@@ -129,17 +157,17 @@ public extension Color {
     /// The color for content layered on top of secondary backgrounds of your grouped interface.
     @available(tvOS, unavailable)
     static var tertiarySystemGroupedBackground: Color { Color(PlatformColor.tertiarySystemGroupedBackground) }
-
+    
     // MARK: Separator Colors
     /// The color for thin borders or divider lines that allows some underlying content to be visible.
     static var separator: Color { Color(PlatformColor.separator) }
     /// The color for borders or divider lines that hides any underlying content.
     static var opaqueSeparator: Color { Color(PlatformColor.opaqueSeparator) }
-
+    
     // MARK: Link Color
-    /// The color for links.
+    /// The specified color for links.
     static var link: Color { Color(PlatformColor.link) }
-
+    
     // MARK: Nonadaptable Colors
     /// The nonadaptable system color for text on a light background.
     @available(tvOS, unavailable)
@@ -161,7 +189,7 @@ public extension Color {
     static var tertiaryLabel: Color { Color(PlatformColor.tertiaryLabelColor) }
     /// The quaternary color to use for text labels and separators.
     static var quaternaryLabel: Color { Color(PlatformColor.quaternaryLabelColor) }
-
+    
     // MARK: Text Colors
     /// The color to use for text.
     static var text: Color { Color(PlatformColor.textColor) }
@@ -179,7 +207,7 @@ public extension Color {
     static var unemphasizedSelectedText: Color { Color(PlatformColor.unemphasizedSelectedTextColor) }
     /// The color to use for the text background in an unemphasized context.
     static var unemphasizedSelectedTextBackground: Color { Color(PlatformColor.unemphasizedSelectedTextBackgroundColor) }
-
+    
     // MARK: Content Colors
     /// The color to use for links.
     static var link: Color { Color(PlatformColor.linkColor) }
@@ -189,17 +217,19 @@ public extension Color {
     static var selectedContentBackground: Color { Color(PlatformColor.selectedContentBackgroundColor) }
     /// The color to use for selected and unemphasized content.
     static var unemphasizedSelectedContentBackground: Color { Color(PlatformColor.unemphasizedSelectedContentBackgroundColor) }
-
+    
     // MARK: Menu Colors
     /// The color to use for the text in menu items.
     static var selectedMenuItemText: Color { Color(PlatformColor.selectedMenuItemTextColor) }
-
+    
     // MARK: Table Colors
     /// The color to use for the optional gridlines, such as those in a table view.
     static var grid: Color { Color(PlatformColor.gridColor) }
     /// The color to use for text in header cells in table views and outline views.
     static var headerText: Color { Color(PlatformColor.headerTextColor) }
-
+    /// The colors to use for alternating content, typically found in table views and collection views.
+    static var alternatingContentBackgroundColors: [Color] { PlatformColor.alternatingContentBackgroundColors.map(Color.init) }
+    
     // MARK: Control Colors
     /// The user's current accent color preference.
     static var controlAccent: Color { Color(PlatformColor.controlAccentColor) }
@@ -219,7 +249,7 @@ public extension Color {
     static var alternateSelectedControlText: Color { Color(PlatformColor.alternateSelectedControlTextColor) }
     /// The patterned color to use for the background of a scrubber control.
     static var scrubberTexturedBackground: Color { Color(PlatformColor.scrubberTexturedBackground) }
-
+    
     // MARK: Window Colors
     /// The color to use for the window background.
     static var windowBackground: Color { Color(PlatformColor.windowBackgroundColor) }
@@ -227,7 +257,7 @@ public extension Color {
     static var windowFrameText: Color { Color(PlatformColor.windowFrameTextColor) }
     /// The color to use in the area beneath your window's views.
     static var underPageBackground: Color { Color(PlatformColor.underPageBackgroundColor) }
-
+    
     // MARK: Highlights and Shadows
     /// The highlight color to use for the bubble that shows inline search result values.
     static var findHighlight: Color { Color(PlatformColor.findHighlightColor) }
