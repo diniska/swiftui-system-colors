@@ -22,10 +22,18 @@ private typealias PlatformColor = NSColor
 public extension Color {
     ///A blue color that automatically adapts to the current trait environment.
     static var systemBlue: Color { Color(PlatformColor.systemBlue) }
+    ///A brown color that automatically adapts to the current trait environment.
+    static var systemBrown: Color { Color(PlatformColor.systemBrown) }
+    ///A cyan color that automatically adapts to the current trait environment.
+    @available(iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    static var systemCyan: Color { Color(PlatformColor.systemCyan) }
     ///A green color that automatically adapts to the current trait environment.
     static var systemGreen: Color { Color(PlatformColor.systemGreen) }
     ///An indigo color that automatically adapts to the current trait environment.
     static var systemIndigo: Color { Color(PlatformColor.systemIndigo) }
+    ///A mint color that automatically adapts to the current trait environment.
+    @available(iOS 15.0, macOS 10.15, tvOS 15.0, *)
+    static var systemMint: Color { Color(PlatformColor.systemMint) }
     ///An orange color that automatically adapts to the current trait environment.
     static var systemOrange: Color { Color(PlatformColor.systemOrange) }
     ///A pink color that automatically adapts to the current trait environment.
