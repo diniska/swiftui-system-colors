@@ -113,7 +113,7 @@ public extension Color {
     static var tertiaryLabel: Color { Color(PlatformColor.tertiaryLabel) }
     /// The color for text labels that contain quaternary content.
     static var quaternaryLabel: Color { Color(PlatformColor.quaternaryLabel) }
-
+    
     // MARK: Fill Colors
     /// An overlay fill color for thin and small shapes.
     @available(tvOS, unavailable)
@@ -127,12 +127,14 @@ public extension Color {
     /// An overlay fill color for large areas that contain complex content.
     @available(tvOS, unavailable)
     static var quaternarySystemFill: Color { Color(PlatformColor.quaternarySystemFill) }
-
+    
     // MARK: Text Colors
     /// The color for placeholder text in controls or text views.
     static var placeholderText: Color { Color(PlatformColor.placeholderText) }
+    
     // MARK: Standard Content Background Colors
     /// Use these colors for standard table views and designs that have a white primary background in a light environment.
+    
     /// The color for the main background of your interface.
     @available(tvOS, unavailable)
     static var systemBackground: Color { Color(PlatformColor.systemBackground) }
@@ -142,8 +144,10 @@ public extension Color {
     /// The color for content layered on top of secondary backgrounds.
     @available(tvOS, unavailable)
     static var tertiarySystemBackground: Color { Color(PlatformColor.tertiarySystemBackground) }
+    
     // MARK: Grouped Content Background Colors
     /// Use these colors for grouped content, including table views and platter-based designs.
+    
     /// The color for the main background of your grouped interface.
     @available(tvOS, unavailable)
     static var systemGroupedBackground: Color { Color(PlatformColor.systemGroupedBackground) }
@@ -153,17 +157,17 @@ public extension Color {
     /// The color for content layered on top of secondary backgrounds of your grouped interface.
     @available(tvOS, unavailable)
     static var tertiarySystemGroupedBackground: Color { Color(PlatformColor.tertiarySystemGroupedBackground) }
-
+    
     // MARK: Separator Colors
     /// The color for thin borders or divider lines that allows some underlying content to be visible.
     static var separator: Color { Color(PlatformColor.separator) }
     /// The color for borders or divider lines that hides any underlying content.
     static var opaqueSeparator: Color { Color(PlatformColor.opaqueSeparator) }
-
+    
     // MARK: Link Color
-    /// The color for links.
+    /// The specified color for links.
     static var link: Color { Color(PlatformColor.link) }
-
+    
     // MARK: Nonadaptable Colors
     /// The nonadaptable system color for text on a light background.
     @available(tvOS, unavailable)
@@ -185,7 +189,7 @@ public extension Color {
     static var tertiaryLabel: Color { Color(PlatformColor.tertiaryLabelColor) }
     /// The quaternary color to use for text labels and separators.
     static var quaternaryLabel: Color { Color(PlatformColor.quaternaryLabelColor) }
-
+    
     // MARK: Text Colors
     /// The color to use for text.
     static var text: Color { Color(PlatformColor.textColor) }
@@ -203,7 +207,7 @@ public extension Color {
     static var unemphasizedSelectedText: Color { Color(PlatformColor.unemphasizedSelectedTextColor) }
     /// The color to use for the text background in an unemphasized context.
     static var unemphasizedSelectedTextBackground: Color { Color(PlatformColor.unemphasizedSelectedTextBackgroundColor) }
-
+    
     // MARK: Content Colors
     /// The color to use for links.
     static var link: Color { Color(PlatformColor.linkColor) }
@@ -213,17 +217,19 @@ public extension Color {
     static var selectedContentBackground: Color { Color(PlatformColor.selectedContentBackgroundColor) }
     /// The color to use for selected and unemphasized content.
     static var unemphasizedSelectedContentBackground: Color { Color(PlatformColor.unemphasizedSelectedContentBackgroundColor) }
-
+    
     // MARK: Menu Colors
     /// The color to use for the text in menu items.
     static var selectedMenuItemText: Color { Color(PlatformColor.selectedMenuItemTextColor) }
-
+    
     // MARK: Table Colors
     /// The color to use for the optional gridlines, such as those in a table view.
     static var grid: Color { Color(PlatformColor.gridColor) }
     /// The color to use for text in header cells in table views and outline views.
     static var headerText: Color { Color(PlatformColor.headerTextColor) }
-
+    /// The colors to use for alternating content, typically found in table views and collection views.
+    static var alternatingContentBackgroundColors: [Color] { PlatformColor.alternatingContentBackgroundColors.map(Color.init) }
+    
     // MARK: Control Colors
     /// The user's current accent color preference.
     static var controlAccent: Color { Color(PlatformColor.controlAccentColor) }
@@ -243,7 +249,7 @@ public extension Color {
     static var alternateSelectedControlText: Color { Color(PlatformColor.alternateSelectedControlTextColor) }
     /// The patterned color to use for the background of a scrubber control.
     static var scrubberTexturedBackground: Color { Color(PlatformColor.scrubberTexturedBackground) }
-
+    
     // MARK: Window Colors
     /// The color to use for the window background.
     static var windowBackground: Color { Color(PlatformColor.windowBackgroundColor) }
@@ -251,7 +257,7 @@ public extension Color {
     static var windowFrameText: Color { Color(PlatformColor.windowFrameTextColor) }
     /// The color to use in the area beneath your window's views.
     static var underPageBackground: Color { Color(PlatformColor.underPageBackgroundColor) }
-
+    
     // MARK: Highlights and Shadows
     /// The highlight color to use for the bubble that shows inline search result values.
     static var findHighlight: Color { Color(PlatformColor.findHighlightColor) }
