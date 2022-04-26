@@ -20,31 +20,31 @@ private typealias PlatformColor = NSColor
 // OSX      | https://developer.apple.com/documentation/appkit/nscolor/standard_colors
 @available(iOS 13.0, macOS 10.15, *)
 public extension Color {
-    ///A blue color that automatically adapts to the current trait environment.
+    /// A blue color that automatically adapts to the current trait environment.
     static var systemBlue: Color { Color(PlatformColor.systemBlue) }
-    ///A brown color that automatically adapts to the current trait environment.
+    /// A brown color that automatically adapts to the current trait environment.
     static var systemBrown: Color { Color(PlatformColor.systemBrown) }
-    ///A cyan color that automatically adapts to the current trait environment.
+    /// A cyan color that automatically adapts to the current trait environment.
     @available(iOS 15.0, macOS 12.0, tvOS 15.0, *)
     static var systemCyan: Color { Color(PlatformColor.systemCyan) }
-    ///A green color that automatically adapts to the current trait environment.
+    /// A green color that automatically adapts to the current trait environment.
     static var systemGreen: Color { Color(PlatformColor.systemGreen) }
-    ///An indigo color that automatically adapts to the current trait environment.
+    /// An indigo color that automatically adapts to the current trait environment.
     static var systemIndigo: Color { Color(PlatformColor.systemIndigo) }
-    ///A mint color that automatically adapts to the current trait environment.
+    /// A mint color that automatically adapts to the current trait environment.
     @available(iOS 15.0, macOS 10.15, tvOS 15.0, *)
     static var systemMint: Color { Color(PlatformColor.systemMint) }
-    ///An orange color that automatically adapts to the current trait environment.
+    /// An orange color that automatically adapts to the current trait environment.
     static var systemOrange: Color { Color(PlatformColor.systemOrange) }
-    ///A pink color that automatically adapts to the current trait environment.
+    /// A pink color that automatically adapts to the current trait environment.
     static var systemPink: Color { Color(PlatformColor.systemPink) }
-    ///A purple color that automatically adapts to the current trait environment.
+    /// A purple color that automatically adapts to the current trait environment.
     static var systemPurple: Color { Color(PlatformColor.systemPurple) }
-    ///A red color that automatically adapts to the current trait environment.
+    /// A red color that automatically adapts to the current trait environment.
     static var systemRed: Color { Color(PlatformColor.systemRed) }
-    ///A teal color that automatically adapts to the current trait environment.
+    /// A teal color that automatically adapts to the current trait environment.
     static var systemTeal: Color { Color(PlatformColor.systemTeal) }
-    ///A yellow color that automatically adapts to the current trait environment.
+    /// A yellow color that automatically adapts to the current trait environment.
     static var systemYellow: Color { Color(PlatformColor.systemYellow) }
 }
 
