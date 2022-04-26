@@ -57,24 +57,23 @@ public extension Color {
 
 @available(iOS 13.0, OSX 10.15, *)
 public extension Color {
-    /// The base gray color.
+    /// The standard base gray color that adapts to the environment.
     static var systemGray: Color { Color(PlatformColor.systemGray) }
 }
 
 #if canImport(UIKit) && !os(tvOS)
 @available(iOS 13.0, *)
 public extension Color {
-    /// A second-level shade of grey.
+    /// A second-level shade of gray that adapts to the environment.
     static var systemGray2: Color { Color(PlatformColor.systemGray2) }
-    /// A third-level shade of grey.
+    /// A third-level shade of gray that adapts to the environment.
     static var systemGray3: Color { Color(PlatformColor.systemGray3) }
-    /// A fourth-level shade of grey.
+    /// A fourth-level shade of gray that adapts to the environment.
     static var systemGray4: Color { Color(PlatformColor.systemGray4) }
-    /// A fifth-level shade of grey.
+    /// A fifth-level shade of gray that adapts to the environment.
     static var systemGray5: Color { Color(PlatformColor.systemGray5) }
-    /// A sixth-level shade of grey.
+    /// A sixth-level shade of gray that adapts to the environment.
     static var systemGray6: Color { Color(PlatformColor.systemGray6) }
-
 }
 #endif
 
