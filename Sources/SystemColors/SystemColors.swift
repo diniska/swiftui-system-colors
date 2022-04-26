@@ -77,6 +77,23 @@ public extension Color {
 }
 #endif
 
+// MARK: - Fixed Colors
+// Links to standard colors documentation
+// Platform | Reference
+// ---------|-----------
+// iOS      | https://developer.apple.com/documentation/uikit/uicolor/standard_colors
+// OSX      | https://developer.apple.com/documentation/appkit/nscolor/standard_colors
+
+@available(iOS 13.0, OSX 10.15, *)
+public extension Color {
+    /// A color object with a grayscale value of 1/3 and an alpha value of 1.0.
+    static var darkGray: Color { Color(PlatformColor.darkGray) }
+    /// A color object with a grayscale value of 2/3 and an alpha value of 1.0.
+    static var lightGray: Color { Color(PlatformColor.lightGray) }
+    /// A color object with RGB values of 1.0, 0.0, and 1.0, and an alpha value of 1.0.
+    static var magenta: Color { Color(PlatformColor.magenta) }
+}
+
 // MARK: - UI Element Colors
 // Links to standard colors documentation
 // Platform | Reference
